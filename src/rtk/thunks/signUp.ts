@@ -14,12 +14,16 @@ export const signUpThunk = createAsyncThunk<
   LoadingModal.open();
   try {
     await signUp(data);
-    const {accessToken, refreshToken, user} = await signIn(data);
-    await storeTokens(accessToken, refreshToken);
-    dispatch(setUser(user));
-    LoadingModal.close();
-  } catch (error: any) {
-    LoadingModal.close();
-    return rejectWithValue(error.message);
+  } catch {
+  } finally {
+    try {
+      const {accessToken, refreshToken, user} = await signIn(data);
+      await storeTokens(accessToken, refreshToken);
+      dispatch(setUser(user));
+    } catch (error: any) {
+      return rejectWithValue(error.message);
+    } finally {
+      LoadingModal.close();
+    }
   }
 });
