@@ -13,7 +13,10 @@ interface Props {
 const OldEnoughField = memo(({value, setValue}: Props) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity activeOpacity={0.8} onPress={setValue}>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={setValue}
+        testID="form-age-checkbox">
         <VectorImage
           source={assets.icons[value ? 'square_check' : 'square']}
           style={styles.icon}

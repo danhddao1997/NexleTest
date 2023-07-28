@@ -11,13 +11,11 @@ import {
   REGISTER,
 } from 'redux-persist';
 import persistedReducer from './persisted';
-import signUpReducer from './signUp';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 import categoriesReducer from './categories';
 
 const combinedReducer = combineReducers({
   persisted: persistedReducer,
-  signUp: signUpReducer,
   categories: categoriesReducer,
 });
 

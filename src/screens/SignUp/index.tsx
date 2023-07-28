@@ -6,7 +6,7 @@ import Content from './Content';
 
 const SignUpScreen = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="signUpScreen">
       <BackgroundImage />
       <Gradient />
       <Content />

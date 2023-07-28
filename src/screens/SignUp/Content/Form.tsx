@@ -125,6 +125,7 @@ const Form = () => {
                   {showFieldTitle ? 'Your email' : ''}
                 </CText>
                 <TextInput
+                  testID="form-email"
                   placeholder={showFieldTitle ? '' : 'Your email'}
                   onBlur={onBlur}
                   onChangeText={onChange}
@@ -181,6 +182,7 @@ const Form = () => {
         <CText style={styles.signUp}>Sign Up</CText>
         <TouchableOpacity
           style={[styles.next_button, !isValid && styles.disabled]}
+          testID="form-button"
           disabled={!isValid}
           activeOpacity={0.8}
           onPress={handleSubmit(onSubmit)}>

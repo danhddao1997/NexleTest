@@ -4,7 +4,7 @@ import AppNavigation from '@navigation/index';
 import {StatusBar} from 'react-native';
 import LoadingModal from 'components/LoadingModal';
 import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/lib/integration/react';
+import {PersistGate} from 'redux-persist/integration/react';
 import {persistor, store} from 'rtk/slices';
 
 const App = () => {

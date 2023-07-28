@@ -113,6 +113,7 @@ const PasswordField = memo(
         <View>
           <View style={[styles.textFieldContainer, borderBottomStyle]}>
             <TextInput
+              testID="form-password"
               placeholder={showPlaceholder ? 'Your password' : ''}
               onFocus={_onFocus}
               onBlur={_onBlur}
